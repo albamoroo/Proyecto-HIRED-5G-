@@ -1,0 +1,63 @@
+body{
+    background-color: rgb(235, 235, 235);
+    font-family: 'MerriWeather', serif;  
+}
+
+html, body {
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+}
+
+/* Botón de Scroll Up*/
+/* Imagen Introducción */
+.container2 {
+    width: 90%;
+    padding: 1rem;
+    margin: 0 auto 0; 
+    background-color: white;
+    box-shadow: 0px 4px 8px rgba(75, 72, 78, 0.2);
+    border-radius: 10px;
+    margin-bottom: 20px;
+    margin-top: 120px; 
+  
+}
+
+.hero-section {
+    display: flex;
+    padding: 1rem;
+    max-width: 98%;
+}
+
+.text-section {
+    padding: 1rem;
+    margin: 0;
+    max-width: 100%;
+    color: black;
+    text-align: left;
+}
+
+
+.text-section h1 {
+    font-size: 1.5rem;
+}
+
+.text-section h2 {
+    font-size: 16px;
+    display: inline-block; 
+    color: #009970;
+    font-weight: bold;
+    margin-bottom: 10px;
+
+}
+
+.text-section p {
+
+    font-size: 14.5px;
+    text-align: justify;
+    
+}
+
+
+
+

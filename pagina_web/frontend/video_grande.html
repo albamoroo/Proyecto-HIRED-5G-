@@ -1,0 +1,394 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TrackIt | Vídeos</title>
+    <!--Bootstrap CSS-->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    
+    <!--Favicon de la página web-->
+    <link rel="icon" type="image/png" href="./fotos/trackit_verde.png" sizes="16x16 32x32 64x64" />
+    <!--Estilos del documento-->
+    <link href="video_grande.css" rel="stylesheet">
+    <link href="estilos.css" rel="stylesheet">
+    <link rel="stylesheet"  type="text/css" href="controlbar.css">
+    <!--Preconexión con Google Fonts-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <!--Fuente del documento-->
+    <link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@300;400;700&display=swap" rel="stylesheet">
+    <!--Iconos de FontAwesome-->
+    <script src="https://kit.fontawesome.com/9de74ee228.js" crossorigin="anonymous"></script> 
+    <!--Configuracion de la URL-->
+    <script src="URL_config.js"></script>
+    
+</head>
+
+<body>
+    
+    <nav class="navbar navbar-expand-lg fixed-top">
+        <div class="container">
+            <a class="navbar-brand me-auto" href="index.html">TrackIt</a>
+            <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasNavbar"
+                aria-labelledby="offcanvasNavbarLabel">
+                <div class="offcanvas-header">
+                    <h5 class="offcanvas-title" id="offcanvasNavbarLabel">TrackIt</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+                </div>
+                <div class="offcanvas-body">
+                    <ul class="navbar-nav justify-content-center flex-grow-1 pe-3">
+                        <li class="nav-item">
+                            <a class="nav-link mx-lg-2" aria-current="page" href="index.html">Inicio</a>
+                        </li>
+
+                        <li class="nav-item">
+                            <a class="nav-link mx-lg-2" href="conocenos.html">Conócenos</a>
+                        </li>
+                        
+                    </ul>
+                </div>
+            </div>
+            
+            <button class="navbar-toggler pe-0" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar" aria-label="Toggle navigation">
+                <i class="fa-solid fa-bars" style="color: black;"></i>
+            </button>
+        </div>
+    </nav>
+    <!--End Nabvar-->
+
+ <div class="container2">
+            <div id="content1" style="display: block;">
+                <section class="hero-section">
+                    <video id="videoFile" controls controlsList="nodownload">
+                        <source src="" type="video/mp4">
+                        Tu navegador no soporta el elemento de video.
+                    </video>
+                </section>
+            </div>
+
+    </div>
+
+
+    <div class="container3">
+         
+        <div id="alwaysVisibleContent" class="row flex-column flex-md-row justify-content-center align-items-center">
+            <div class="col-md-9 d-flex justify-content-center gap-3 mb-3 mb-md-0">
+            <div class="card border-success rounded-3 text-center p-1 flex-fill shadow-sm"  style="background: linear-gradient(to bottom, #d4edda 40%, #ffffff 40%);">
+                    <i class="fa-solid fa-car fa-lg text-success mb-2" style="padding:4px;"></i>
+                    <div id="videoMetrica" class="fw-bold fs-6 text-dark">0</div>
+                    <div class="text-muted small">Coches</div>
+                </div>
+
+                <div class="card border-success rounded-3 text-center p-1 flex-fill shadow-sm"  style="background: linear-gradient(to bottom, #d4edda 40%, #ffffff 40%);">
+                    <i class="fa-solid fa-person fa-lg text-success mb-2" style="padding:4px;"></i>
+                    <div id ="videoMetricaPersona" class="fw-bold fs-6 text-dark">0</div>
+                    <div class="text-muted small">Personas</div>
+                </div>
+
+                <div class="card border-success rounded-3 text-center p-1 flex-fill shadow-sm"  style="background: linear-gradient(to bottom, #d4edda 40%, #ffffff 40%);">
+                    <i class="fa-solid fa-bicycle fa-lg text-success mb-2" style="padding:4px;"></i>
+                    <div id = "videoMetricaBici" class="fw-bold fs-6 text-dark">0</div>
+                    <div class="text-muted small">Bicicletas</div>
+                </div>
+
+            </div>
+
+         <!-- Información del video -->
+        <div class="col-md-3 d-flex flex-column align-items-start order-md-2 order-1">
+            <div class="row">
+                <div class="col-12 d-flex flex-column align-items-start">
+                    <div id="videoTitle" class="fs-6 fw-bold small mb-1 text-dark"></div>
+                    <div id="videoCreatedAt" class="small text-muted"></div>
+                    <div id="videoDuration2" class="small text-muted"></div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+    </div> 
+
+
+    
+
+    <div class="container_videos text-center" id="videos">
+    <h3 class="section-subtitle">TODO LO QUE NECESITAS, <span class="hero-line-tech">TODO EN UN SOLO LUGAR</span></h3>
+    <p>Revive las emisiones accediendo a <em>todas</em> las grabaciones y explora sus métricas asociadas.</p>
+    <div class="table-responsive">
+        <table id="fresh-table" class="table">
+        <thead>
+            <tr>
+            <th data-field="fecha" data-sortable="true">Fecha / Hora</th>
+            <th data-field="titulo" data-sortable="true">Título</th>
+            <th data-field="metrica_coches" data-sortable="true" data-align="center">Coches detectados</th>
+            <th data-field="metrica_personas" data-sortable="true" data-align="center">Personas detectadas</th>
+            <th data-field="metrica_bici" data-sortable="true" data-align="center">Bicicletas detectadas</th>
+            <th data-field="duracion" data-sortable="true" data-align="center">Duración</th>
+            </tr>
+        </thead>
+        <tbody id="videos-table-body">
+            <!-- Rellenado dinámico -->
+        </tbody>
+        </table>
+    </div>
+    </div>
+
+    <!--Footer de la página web-->
+    <div class="cuerpo-footer">
+        <footer>
+            <div class="container-footer">
+               <div class="section sobrenosotros">
+                    <h2>¿Quiénes somos?</h2>
+                    <p>TrackIt te conecta con un universo de historias que suceden en tiempo real. Observa, analiza y descubre cómo se mueven las personas y el tráfico en tu ciudad gracias al potencial del 5G y la inteligencia visual.<br></br>
+                    <em>Cada emisión es una ventana viva a la ciudad.</em><br></br>
+                    <em>Cada dato, una historia que contar.</em></p>
+                <ul class="social">
+                    <li><a href="mailto:UO288032@uniovi.es"><i class="fa-regular fa-envelope" aria-hidden="true" style="color: black; font-size: 20px;"></i></a></li>
+                    <li><a href="https://www.instagram.com/epigijon/"><i class="fa-brands fa-instagram" aria-hidden="true" style="color: black; font-size: 20px;"></i></a></li>
+                    <li><a href="https://twitter.com/epigijon"><i class="fa-brands fa-twitter" aria-hidden="true" style="color: black; font-size: 20px;"></i></a></li>
+                    <li><a href="https://www.linkedin.com/school/epigijon/posts/?feedView=all"><i class="fa-brands fa-linkedin" aria-hidden="true" style="color: black; font-size: 20px;"></i></a></li>
+                </ul>
+                </div>
+                <div class="section enlaces">
+                    <h2>Nuestras opciones </h2>
+                    <ul>
+                        <li><a href="index.html">Inicio</a></li>
+                        <li><a href="conocenos.html">Conócenos</a></li>
+    
+                    </ul>
+                </div>
+                <div class="section contacto">
+                    <h2>Contacto</h2>
+                    <ul class="info">
+                        <li>
+                            <span><i class="fa-solid fa-location-dot" aria-hidden="true"></i></span>
+                            <span>Campus de Gijón - Universidad de Oviedo<br>Periurbano - Rural, 33203<br> Gijón,
+                                Asturias</span>
+                        </li>
+                        <li>
+                            <span><i class="fa-solid fa-phone" aria-hidden="true"></i></span>
+                            <p><a href="tel:+34 985 18 22 30">985 18 22 30</a><br>
+                                
+                            </p>
+                        </li>
+                        <li>
+                            <span><i class="fa-regular fa-envelope" aria-hidden="true"></i></span>
+                            <p><a href="mailto:UO288025@uniovi.es">trackit@gmail.com</a></p>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </footer>
+        <div class="copyrightText">
+            <p> Desarrollado por HIRED 5G — GRUPO 4 &copy; 2025.</p>
+        </div>
+        </div>
+        
+     <button id="scroll-up" aria-label="Volver arriba" title="Volver arriba">
+            <i class="fa-solid fa-chevron-up" aria-hidden="true"></i>
+        </button>
+
+
+    <!--Bootstrap JS-->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+        crossorigin="anonymous">
+    </script>
+
+    <!--Script para cambiar el color de los enlaces del menú OFFCANVAS de la NAVBAR -->
+    <script>
+        var offcanvas = document.querySelector('.offcanvas');
+
+            offcanvas.addEventListener('show.bs.offcanvas', function () {
+                var navLinks = document.querySelectorAll('.offcanvas .nav-link, .offcanvas .nav-link.active');
+                navLinks.forEach(function (navLink) {
+                    navLink.style.color = 'black';
+                });
+            });
+
+            offcanvas.addEventListener('hide.bs.offcanvas', function () {
+                var navLinks = document.querySelectorAll('.offcanvas .nav-link, .offcanvas .nav-link.active');
+                navLinks.forEach(function (navLink) {
+                    navLink.style.color = '';
+                });
+            });
+    </script>
+
+     <!--Script para el botón de "volver arriba"-->
+    <script>
+        (function () {
+            const btn = document.getElementById('scroll-up');
+            if (!btn) return;
+            const THRESHOLD = 100; // px para mostrar el botón
+
+            function onScroll() {
+                if (window.scrollY > THRESHOLD) btn.classList.add('show');
+                else btn.classList.remove('show');
+            }
+
+            // click: subir suave (respeta prefers-reduced-motion)
+            btn.addEventListener('click', () => {
+                if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+                    window.scrollTo(0, 0);
+                } else {
+                    window.scrollTo({ top: 0, behavior: 'smooth' });
+                }
+            });
+
+            window.addEventListener('scroll', onScroll, { passive: true });
+            document.addEventListener('DOMContentLoaded', onScroll);
+        })();
+    </script>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const url = window.serverSettings.url;
+            const urlParams = new URLSearchParams(window.location.search);
+            const videoId = urlParams.get('id');
+
+            const videoFile = document.getElementById('videoFile');
+            const videoTitle = document.getElementById('videoTitle');
+            const videoCreatedAt = document.getElementById('videoCreatedAt');
+            const videoMetrica = document.getElementById('videoMetrica');
+            const videoMetricaPersona = document.getElementById('videoMetricaPersona');
+            const videoMetricaBici = document.getElementById('videoMetricaBici');
+            const videoDuration2 = document.getElementById('videoDuration2');
+
+            fetch(url + ':3000/video/' + videoId)
+                .then(res => res.json())
+                .then(json => {
+                    videoTitle.innerHTML = 'Grabación ' + json.id_video;
+                    const sourceEl = document.querySelector('#videoFile source');
+                    sourceEl.src = window.serverSettings.url + ':3000/videos/' + json.nombre;
+
+                    videoFile.load(); 
+                    videoFile.muted = true; 
+                    videoFile.play().catch(err => console.warn('Autoplay bloqueado:', err));
+
+                    const durationseconds = json.duracion ?? 0;
+                    let duracionFormatted;
+                    if (durationseconds >= 60){
+                        const minutos = Math.floor(durationseconds / 60);
+                        const segundos = durationseconds % 60;
+                        duracionFormatted = `${minutos} minutos ${segundos} segundos`;
+                    } else {
+                        duracionFormatted = `${durationseconds} segundos`;
+                    }
+                    videoDuration2.innerHTML = 'Duración: ' + duracionFormatted;
+
+                    // Fecha
+                    const createdAt = new Date(json.fecha_hora);
+                    videoCreatedAt.innerHTML = createdAt.toLocaleDateString('es-ES', {
+                        day: '2-digit',
+                        month: 'long',
+                        year: 'numeric',
+                        hour: '2-digit',
+                        minute: '2-digit',
+                        second: '2-digit'
+                    });
+
+                    // Métricas
+                    videoMetrica.innerHTML = (json.metrica_coches ?? 0);
+                    videoMetricaPersona.innerHTML = (json.metrica_personas ?? 0);
+                    videoMetricaBici.innerHTML = (json.metrica_bici ?? 0);
+                })
+                .catch(error => console.error(error));
+        });
+    </script>
+
+
+    
+    <!--Script para la tabla de vídeos guardados-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+    <script src="https://unpkg.com/bootstrap-table/dist/bootstrap-table.min.js"></script>
+ 
+    <script>
+    const url = window.serverSettings.url;   
+    (function () {
+    const API_VIDEOS = url + ':3000/video';
+ 
+    function fmtDateShort(iso) {
+        const d = new Date(iso);
+        const datePart = d.toLocaleDateString('es-ES', { day:'2-digit', month:'short', year:'numeric' }).replace(/\./g,'');
+        const timePart = d.toLocaleTimeString('es-ES', { hour:'2-digit', minute:'2-digit' });
+        return `${datePart} · ${timePart}`;
+    }
+ 
+    function toTableRows(videos) {
+        function formatDuration(seconds) {
+            if (!seconds) return '0 s';
+            if (seconds < 60) return `${seconds} s`;
+            
+            const minutes = Math.floor(seconds / 60);
+            const remainingSeconds = seconds % 60;
+            return `${minutes} min ${remainingSeconds} s`;
+        }
+
+        return videos.map(v => ({
+            id_video: v.id_video,
+            fecha: fmtDateShort(v.fecha_hora),
+            titulo: `<a href="video_grande.html?id=${encodeURIComponent(v.id_video)}">Grabación ${v.id_video}</a>`,
+            metrica_coches: v.metrica_coches ?? 0,
+            metrica_personas: v.metrica_personas ?? 0,
+            metrica_bici: v.metrica_bici ?? 0,
+            duracion: formatDuration(v.duracion),
+            estado: v.procesado ? '<span class="status-procesado">Procesado</span>' : '<span class="status-pendiente">Pendiente</span>'
+        }));
+    }
+ 
+ 
+    function initTable(rows) {
+        const $table = $('#fresh-table');
+        if ($table.data('bootstrap.table')) $table.bootstrapTable('destroy');
+ 
+        $table.bootstrapTable({
+        data: rows,
+        toolbar: '.toolbar',
+        search: true,
+        info: false,
+        showRefresh: false,
+        showToggle: false,
+        showColumns: false,
+        pagination: true,
+        striped: true,
+        sortable: true,
+        pageSize: 5,
+        pageList: [5, 10, 25, 50, 100],
+        classes: 'table table-hover table-striped',
+        escape: false,
+        language: 'es-ES',
+        formatSearch: () => 'Buscar',
+        formatShowingRows: () => '',
+        formatRecordsPerPage: n => n + ' filas visibles',
+        formatNoMatches: () => 'No se encontraron resultados'
+        });
+        const $searchInput = $('.fixed-table-toolbar .search input');
+        $('.fixed-table-toolbar .search').css('position', 'relative');
+        const $icon = $('<i class="fa fa-search position-absolute" style="left:15px; top:50%; transform:translateY(-50%); color:#888;"></i>');
+        $('.fixed-table-toolbar .search').append($icon);
+        $searchInput.css('padding-left', '2.5rem');            
+   }
+ 
+     function loadFromApi() {
+        console.log('Cargando vídeos desde', API_VIDEOS);
+        fetch(API_VIDEOS, { cache: 'no-store' })
+            .then(res => { if (!res.ok) throw new Error('HTTP ' + res.status); return res.json(); })
+            .then(data => {
+                // Filtrar sólo los videos procesados (procesado === 1)
+                const processed = Array.isArray(data) ? data.filter(v => Number(v.procesado) === 1) : [];
+                initTable(toTableRows(processed));
+            })
+            .catch(err => { console.error('Error cargando /video:', err); initTable([]); });
+    }
+ 
+ 
+    $(document).ready(loadFromApi);
+    })();
+    </script>
+
+</body>
+
+</html>
