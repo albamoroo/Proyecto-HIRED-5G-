@@ -1,0 +1,6 @@
+{
+  "VIDEO_SOURCE": "socket",
+  "OUTPUT_PATH": "",
+  "SHOW_WINDOW": false,
+  "PROCESSING_QUEUE_SIZE": 1
+}

@@ -1,0 +1,10 @@
+{
+  "MODEL_PATH": "./models/yolo12n.pt",
+  "CONFIDENCE": 0.35,
+  "IOU": 0.45,
+  "IMG_SIZE": [480, 384],
+  "FPS_CAP": 30,
+  "DETECTION_CLASSES": [0,1,2],
+  "TRACKER": "./models/botsort.yaml",
+  "LINE_ORIENTATION": "vertical"
+}
